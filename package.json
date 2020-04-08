@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Add <?xml version=\"1.0\" encoding=\"UTF-8\"?> to SVGs files",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
