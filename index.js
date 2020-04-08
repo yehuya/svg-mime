@@ -1,22 +1,36 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const argv = require('yargs').argv;
+const path = require('path');
+const fsPromises = fs.promises;
 
-const xml = '<?xml version="1.0" encoding="UTF-8"?>';
+const xmlTag = '<?xml version="1.0" encoding="UTF-8"?>';
 
-const valid = (data) => data && /^<\?xml/g.test(data.trim());
+const valid = (data) => data && /^<\?xml(.*)\?>/g.test(data.trim());
 
-const run = async (input) => {
-    const exists = await fs.existsSync(input);
-    
-    if(exists) {
-        const file = fs.readFileSync(input, 'utf8');
-
-        if(!valid(file)) {
-            const data = `${xml}\r\n${file}`;
-            await fs.writeFileSync(input, data);
+const isSvgFile = async (file) => {
+    return new Promise((resolve, reject) => {
+        if(path.extname(file) !== '.svg') {
+            resolve(false);
         }
-    }
+
+        fs.exists(file, resolve);
+    });
 }
 
-argv._.forEach(async file => await run(file, null))
+const addXmlTag = async (input) => {
+    const exists = await isSvgFile(input);
+    
+    if(exists) {
+        const file = await fsPromises.readFile(input, 'utf8');
+
+        if(!valid(file)) {
+            const data = `${xmlTag}\r\n${file}`;
+            await fsPromises.writeFile(input, data);
+
+            process.stdout.write(`> ${path.basename(input)}\n`);
+        }
+    } 
+}
+
+argv._.forEach(async file => await addXmlTag(file))
