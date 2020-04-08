@@ -1,0 +1,25 @@
+{
+  "name": "svg-mime",
+  "version": "1.0.0",
+  "description": "Add <?xml version=\"1.0\" encoding=\"UTF-8\"?> to SVGs files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yehuya/svg-mime.git"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "Yehuya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yehuya/svg-mime/issues"
+  },
+  "homepage": "https://github.com/yehuya/svg-mime#readme",
+  "dependencies": {
+    "yargs": "^15.3.1"
+  }
+}
