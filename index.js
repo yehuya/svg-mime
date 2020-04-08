@@ -6,7 +6,7 @@ const xml = '<?xml version="1.0" encoding="UTF-8"?>';
 
 const valid = (data) => data && /^<\?xml/g.test(data.trim());
 
-const run = async (input, output = null) => {
+const run = async (input) => {
     const exists = await fs.existsSync(input);
     
     if(exists) {
