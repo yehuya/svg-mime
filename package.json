@@ -1,5 +1,5 @@
 {
-  "name": "svg-mime",
+  "name": "svg-xml-tag",
   "version": "1.0.0",
   "description": "Add <?xml version=\"1.0\" encoding=\"UTF-8\"?> to SVGs files",
   "main": "index.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yehuya/svg-mime.git"
+    "url": "git+https://github.com/yehuya/svg-xml-tag.git"
   },
   "keywords": [
-    "svg"
+    "svg", "xml"
   ],
   "author": "Yehuya",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yehuya/svg-mime/issues"
+    "url": "https://github.com/yehuya/svg-xml-tag/issues"
   },
-  "homepage": "https://github.com/yehuya/svg-mime#readme",
+  "homepage": "https://github.com/yehuya/svg-xml-tag#readme",
   "dependencies": {
     "yargs": "^15.3.1"
   }
