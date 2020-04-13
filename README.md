@@ -32,7 +32,7 @@ $ svg-xml-tag ./filename.svg
 ```
 Multiple files at once
 ```bash
-$ svg-sml-tag ./*.svg
+$ svg-xml-tag ./*.svg
 ```
 ### Test
 Enter the package folder
