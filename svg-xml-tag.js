@@ -31,4 +31,4 @@ const addXmlTag = async (input) => {
     } 
 }
 
-module.exports = {validXmlTag, isSvgFileExists, addXmlTag};
+module.exports = {validXmlTag, isSvgFileExists, addXmlTag, xmlTag};
