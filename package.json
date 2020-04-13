@@ -12,7 +12,8 @@
     "url": "git+https://github.com/yehuya/svg-xml-tag.git"
   },
   "keywords": [
-    "svg", "xml"
+    "svg",
+    "xml"
   ],
   "author": "Yehuya",
   "license": "MIT",
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/yehuya/svg-xml-tag#readme",
   "dependencies": {
     "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0"
   }
 }
