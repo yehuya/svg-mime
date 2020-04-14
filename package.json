@@ -1,6 +1,6 @@
 {
   "name": "svg-xml-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add <?xml version=\"1.0\" encoding=\"UTF-8\"?> to SVGs files",
   "main": "index.js",
   "bin": "index.js",
